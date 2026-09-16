@@ -1,0 +1,10 @@
+# origin: https://app.mayhem.security/mayhemheroes/python-xbrl/fuzz-parsers/7
+project: savantenvs/python-xbrl
+target: fuzz-parsers-buggy-mhh-run-7
+
+cmds:
+  - cmd: /mayhem/fuzz_parsers
+    libfuzzer: true
+    timeout: 12
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
